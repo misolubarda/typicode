@@ -17,6 +17,7 @@
 		9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56CF21B1A3D500A05ED6 /* Endpoint.swift */; };
 		9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56D121B1A44300A05ED6 /* HTTPRequest.swift */; };
 		9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56D521B1A61300A05ED6 /* Response.swift */; };
+		9AAC56D821B1A6BC00A05ED6 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56D721B1A6BC00A05ED6 /* NetworkSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9AAC56CF21B1A3D500A05ED6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9AAC56D121B1A44300A05ED6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		9AAC56D521B1A61300A05ED6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		9AAC56D721B1A6BC00A05ED6 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				9AAC56CF21B1A3D500A05ED6 /* Endpoint.swift */,
 				9AAC56D121B1A44300A05ED6 /* HTTPRequest.swift */,
+				9AAC56D721B1A6BC00A05ED6 /* NetworkSession.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
+				9AAC56D821B1A6BC00A05ED6 /* NetworkSession.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
 				9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */,
 			);
