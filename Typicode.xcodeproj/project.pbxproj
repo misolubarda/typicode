@@ -93,6 +93,9 @@
 		9AAC569721B181E400A05ED6 /* Typicode */ = {
 			isa = PBXGroup;
 			children = (
+				9AAC56C821B1A02000A05ED6 /* DataLayer */,
+				9AAC56C721B1A01000A05ED6 /* DomainLayer */,
+				9AAC56C621B1A00500A05ED6 /* UILayer */,
 				9AAC569821B181E400A05ED6 /* AppDelegate.swift */,
 				9AAC569F21B181E600A05ED6 /* Assets.xcassets */,
 				9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */,
@@ -117,6 +120,27 @@
 				9AAC56BA21B181E600A05ED6 /* Info.plist */,
 			);
 			path = TypicodeUITests;
+			sourceTree = "<group>";
+		};
+		9AAC56C621B1A00500A05ED6 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
+		9AAC56C721B1A01000A05ED6 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		9AAC56C821B1A02000A05ED6 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
