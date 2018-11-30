@@ -16,6 +16,7 @@
 		9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56CC21B1A28E00A05ED6 /* User.swift */; };
 		9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56CF21B1A3D500A05ED6 /* Endpoint.swift */; };
 		9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56D121B1A44300A05ED6 /* HTTPRequest.swift */; };
+		9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56D521B1A61300A05ED6 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9AAC56CC21B1A28E00A05ED6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9AAC56CF21B1A3D500A05ED6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		9AAC56D121B1A44300A05ED6 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		9AAC56D521B1A61300A05ED6 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		9AAC56C721B1A01000A05ED6 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9AAC56D521B1A61300A05ED6 /* Response.swift */,
 				9AAC56CB21B1A21200A05ED6 /* Entities */,
 			);
 			path = DomainLayer;
@@ -306,6 +309,7 @@
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
+				9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
