@@ -13,6 +13,7 @@
 		9AAC56AE21B181E600A05ED6 /* TypicodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56AD21B181E600A05ED6 /* TypicodeTests.swift */; };
 		9AAC56B921B181E600A05ED6 /* TypicodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56B821B181E600A05ED6 /* TypicodeUITests.swift */; };
 		9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */; };
+		9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56CC21B1A28E00A05ED6 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9AAC56B821B181E600A05ED6 /* TypicodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUITests.swift; sourceTree = "<group>"; };
 		9AAC56BA21B181E600A05ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9AAC56CC21B1A28E00A05ED6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		9AAC56C721B1A01000A05ED6 /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9AAC56CB21B1A21200A05ED6 /* Entities */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
@@ -144,6 +147,14 @@
 			children = (
 			);
 			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		9AAC56CB21B1A21200A05ED6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9AAC56CC21B1A28E00A05ED6 /* User.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 			files = (
 				9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */,
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
+				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
