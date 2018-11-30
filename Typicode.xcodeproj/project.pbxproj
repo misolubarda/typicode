@@ -12,6 +12,7 @@
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
 		9AAC56AE21B181E600A05ED6 /* TypicodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56AD21B181E600A05ED6 /* TypicodeTests.swift */; };
 		9AAC56B921B181E600A05ED6 /* TypicodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56B821B181E600A05ED6 /* TypicodeUITests.swift */; };
+		9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		9AAC56B421B181E600A05ED6 /* TypicodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypicodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC56B821B181E600A05ED6 /* TypicodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUITests.swift; sourceTree = "<group>"; };
 		9AAC56BA21B181E600A05ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		9AAC56C621B1A00500A05ED6 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */,
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
