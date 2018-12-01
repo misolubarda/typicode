@@ -22,3 +22,7 @@ struct HttpRequest {
         return URLRequest(url: url)
     }
 }
+
+enum RequestError: Error {
+    case urlRequestFailed
+}

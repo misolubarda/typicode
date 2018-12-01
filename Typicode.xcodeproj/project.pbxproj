@@ -10,6 +10,9 @@
 		3EEC3609983E18BAB86B7222 /* Pods_TypicodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3C3D7B0CC463CB0779509 /* Pods_TypicodeTests.framework */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
+		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
+		9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */; };
+		9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */; };
 		9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC569821B181E400A05ED6 /* AppDelegate.swift */; };
 		9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC569F21B181E600A05ED6 /* Assets.xcassets */; };
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
@@ -53,6 +56,9 @@
 		7A2D0BE9C65307875D201D7D /* Pods-Typicode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typicode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Typicode/Pods-Typicode.debug.xcconfig"; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
+		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
+		9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProviderTests.swift; sourceTree = "<group>"; };
+		9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceFake.swift; sourceTree = "<group>"; };
 		9AAC569521B181E400A05ED6 /* Typicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC569821B181E400A05ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC569F21B181E600A05ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 			path = "Use cases";
 			sourceTree = "<group>";
 		};
+		9A7DE89021B333B2002C37F8 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
 		9AAC568C21B181E400A05ED6 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +176,7 @@
 			children = (
 				9AAC56DC21B2D3F500A05ED6 /* Fakes */,
 				9AAC56DA21B1AB1200A05ED6 /* HttpServiceTests.swift */,
+				9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */,
 				9AAC56AF21B181E600A05ED6 /* Info.plist */,
 			);
 			path = TypicodeTests;
@@ -198,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAC56CE21B1A3BA00A05ED6 /* Networking */,
+				9A7DE89021B333B2002C37F8 /* Providers */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -224,6 +240,7 @@
 		9AAC56DC21B2D3F500A05ED6 /* Fakes */ = {
 			isa = PBXGroup;
 			children = (
+				9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */,
 				9AAC56DD21B2D40100A05ED6 /* NetworkSessionFake.swift */,
 			);
 			path = Fakes;
@@ -473,6 +490,7 @@
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
 				9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */,
 				9AAC56D821B1A6BC00A05ED6 /* NetworkSession.swift in Sources */,
+				9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */,
 				9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
 				9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */,
@@ -483,8 +501,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */,
 				9AAC56DE21B2D40100A05ED6 /* NetworkSessionFake.swift in Sources */,
 				9AAC56DB21B1AB1200A05ED6 /* HttpServiceTests.swift in Sources */,
+				9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
