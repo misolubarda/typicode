@@ -14,3 +14,5 @@ struct User {
     let email: String
     let address: String
 }
+
+typealias Users = [User]

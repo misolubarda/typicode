@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3EEC3609983E18BAB86B7222 /* Pods_TypicodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3C3D7B0CC463CB0779509 /* Pods_TypicodeTests.framework */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
+		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC569821B181E400A05ED6 /* AppDelegate.swift */; };
 		9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC569F21B181E600A05ED6 /* Assets.xcassets */; };
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 		70115F52E5D8F5002DB4D7CE /* Pods-Typicode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typicode.release.xcconfig"; path = "Pods/Target Support Files/Pods-Typicode/Pods-Typicode.release.xcconfig"; sourceTree = "<group>"; };
 		7A2D0BE9C65307875D201D7D /* Pods-Typicode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typicode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Typicode/Pods-Typicode.debug.xcconfig"; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9AAC569521B181E400A05ED6 /* Typicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC569821B181E400A05ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC569F21B181E600A05ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 				13789AD99EAE875B6B54CC34 /* Pods_TypicodeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A7DE88A21B3327E002C37F8 /* Use cases */ = {
+			isa = PBXGroup;
+			children = (
+				9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */,
+			);
+			path = "Use cases";
 			sourceTree = "<group>";
 		};
 		9AAC568C21B181E400A05ED6 = {
@@ -179,6 +189,7 @@
 			children = (
 				9AAC56D521B1A61300A05ED6 /* Response.swift */,
 				9AAC56CB21B1A21200A05ED6 /* Entities */,
+				9A7DE88A21B3327E002C37F8 /* Use cases */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
@@ -460,6 +471,7 @@
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
+				9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */,
 				9AAC56D821B1A6BC00A05ED6 /* NetworkSession.swift in Sources */,
 				9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
