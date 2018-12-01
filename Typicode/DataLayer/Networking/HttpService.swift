@@ -8,7 +8,11 @@
 
 import Foundation
 
-class HttpService {
+protocol HttpService {
+    func execute<T: Decodable>(_ request: URLRequest, callback: @escaping (Response<T>) -> Void)
+}
+
+class HttpServiceProvider: HttpService {
     private let session: NetworkSession
 
     init(session: NetworkSession) {

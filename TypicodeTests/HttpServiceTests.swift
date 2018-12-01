@@ -17,7 +17,7 @@ class HttpServiceTests: XCTestCase {
         let sessionFake = NetworkSessionFake()
         let userData = Data.user
         sessionFake.data = userData
-        let service = HttpService(session: sessionFake)
+        let service = HttpServiceProvider(session: sessionFake)
         var result: UserFake?
 
         service.execute(URLRequest.fake) { (response: Response<UserFake>) in
@@ -34,7 +34,7 @@ class HttpServiceTests: XCTestCase {
     func test_execute_onError_returnsError() {
         let sessionFake = NetworkSessionFake()
         sessionFake.error = NSError(domain: "someDomain", code: 400, userInfo: nil)
-        let service = HttpService(session: sessionFake)
+        let service = HttpServiceProvider(session: sessionFake)
         var error: Bool?
 
         service.execute(URLRequest.fake) { (response: Response<UserFake>) in
@@ -51,7 +51,7 @@ class HttpServiceTests: XCTestCase {
     func test_execute_onDataNotParsable_returnsDecodingError() {
         let sessionFake = NetworkSessionFake()
         sessionFake.data = Data.userWithMissingData
-        let service = HttpService(session: sessionFake)
+        let service = HttpServiceProvider(session: sessionFake)
         var result: Error?
 
         service.execute(URLRequest.fake) { (response: Response<UserFake>) in
@@ -67,7 +67,7 @@ class HttpServiceTests: XCTestCase {
 
     func test_execute_onNoErrorNorData_returnsSpecificError() {
         let sessionFake = NetworkSessionFake()
-        let service = HttpService(session: sessionFake)
+        let service = HttpServiceProvider(session: sessionFake)
         var result: Error?
 
         service.execute(URLRequest.fake) { (response: Response<UserFake>) in
