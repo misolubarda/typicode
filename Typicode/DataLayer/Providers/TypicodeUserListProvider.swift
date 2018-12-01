@@ -32,9 +32,26 @@ class TypicodeUserListProvider: UserListUseCase {
 }
 
 struct TypicodeUser: Decodable {
+    enum CodingKeys: String, CodingKey {
+        case name, username, email
+        case typicodeAddress = "address"
+    }
+
     let name: String
     let username: String
     let email: String
+    let typicodeAddress: TypicodeAddress
+}
+
+struct TypicodeAddress: Decodable {
+    let street: String
+    let suite: String
+    let city: String
+    let zipcode: String
+
+    var address: String {
+        return [street, suite, city, zipcode].joined(separator: ", ")
+    }
 }
 
 extension Array where Element == TypicodeUser {
@@ -42,6 +59,6 @@ extension Array where Element == TypicodeUser {
         return map { User(name: $0.name,
                           username: $0.username,
                           email: $0.email,
-                          address: "") }
+                          address: $0.typicodeAddress.address) }
     }
 }

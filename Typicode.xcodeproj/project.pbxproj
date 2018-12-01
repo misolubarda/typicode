@@ -13,6 +13,7 @@
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
 		9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */; };
 		9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */; };
+		9A7DE89821B3440A002C37F8 /* UserFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89721B3440A002C37F8 /* UserFake.swift */; };
 		9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC569821B181E400A05ED6 /* AppDelegate.swift */; };
 		9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC569F21B181E600A05ED6 /* Assets.xcassets */; };
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
 		9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProviderTests.swift; sourceTree = "<group>"; };
 		9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceFake.swift; sourceTree = "<group>"; };
+		9A7DE89721B3440A002C37F8 /* UserFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFake.swift; sourceTree = "<group>"; };
 		9AAC569521B181E400A05ED6 /* Typicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC569821B181E400A05ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC569F21B181E600A05ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */,
 				9AAC56DD21B2D40100A05ED6 /* NetworkSessionFake.swift */,
+				9A7DE89721B3440A002C37F8 /* UserFake.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			files = (
 				9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */,
 				9AAC56DE21B2D40100A05ED6 /* NetworkSessionFake.swift in Sources */,
+				9A7DE89821B3440A002C37F8 /* UserFake.swift in Sources */,
 				9AAC56DB21B1AB1200A05ED6 /* HttpServiceTests.swift in Sources */,
 				9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */,
 			);

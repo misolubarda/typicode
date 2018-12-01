@@ -15,7 +15,7 @@ class TypicodeUserListProviderTests: XCTestCase {
     private var provider: TypicodeUserListProvider!
 
     override func setUp() {
-        httpServiceFake.result = [TypicodeUser(name: "name1", username: "username1", email: "email1")]
+        httpServiceFake.result = [TypicodeUser.fakeUser]
         provider = TypicodeUserListProvider(service: httpServiceFake)
     }
 
@@ -49,6 +49,24 @@ class TypicodeUserListProviderTests: XCTestCase {
         expect(success).to(beTrue())
     }
 
+    func test_fetch_dataModelIsCorrect() {
+        let networkSessionFake = NetworkSessionFake()
+        networkSessionFake.data = Data.users
+        let httpService = HttpServiceProvider(session: networkSessionFake)
+        provider = TypicodeUserListProvider(service: httpService)
+        var users: Users?
+
+        provider.fetch { response in
+            switch response {
+            case let .success(result):
+                users = result
+            default: break
+            }
+        }
+
+        expect(users).notTo(beNil())
+    }
+
     func test_fetch_onErrorResponse_resultIsError() {
         httpServiceFake.error = NSError(domain: "domain", code: 400)
         let provider = TypicodeUserListProvider(service: httpServiceFake)
@@ -63,5 +81,18 @@ class TypicodeUserListProviderTests: XCTestCase {
         }
 
         expect(error).to(beTrue())
+    }
+}
+
+private extension TypicodeUser {
+    static var fakeUser: TypicodeUser {
+        let address = TypicodeAddress(street: "street1",
+                                      suite: "suite",
+                                      city: "city",
+                                      zipcode: "zipcode")
+        return TypicodeUser(name: "name1",
+                            username: "username1",
+                            email: "email1",
+                            typicodeAddress: address)
     }
 }
