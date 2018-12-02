@@ -8,15 +8,19 @@
 
 import UIKit
 
+protocol AppCoordinatorDependencies: UserListViewControllerDependencies {}
+
 class AppCoordinator {
     let window: UIWindow
+    private let dependencies: AppCoordinatorDependencies
 
-    init() {
+    init(dependencies: AppCoordinatorDependencies) {
         window = UIWindow(frame: UIScreen.main.bounds)
+        self.dependencies = dependencies
     }
 
     func start() {
-        let userListVC = UserListViewController()
+        let userListVC = UserListViewController(dependencies: dependencies)
         window.rootViewController = userListVC
         window.makeKeyAndVisible()
     }

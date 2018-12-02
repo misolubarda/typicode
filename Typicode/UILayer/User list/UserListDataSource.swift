@@ -8,11 +8,23 @@
 
 import UIKit
 
+protocol UserListDataSourceDependencies {
+    var userListUseCase: UserListUseCase { get }
+}
+
 class UserListDataSource: NSObject {
     private let cellIdentifier: String
+    private let dependencies: UserListDataSourceDependencies
 
-    init(cellIdentifier: String) {
+    init(cellIdentifier: String, dependencies: UserListDataSourceDependencies) {
         self.cellIdentifier = cellIdentifier
+        self.dependencies = dependencies
+    }
+
+    func fetch() {
+        dependencies.userListUseCase.fetch { response in
+
+        }
     }
 }
 

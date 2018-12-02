@@ -8,13 +8,15 @@
 
 import UIKit
 
+protocol UserListViewControllerDependencies: UserListDataSourceDependencies {}
+
 class UserListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let dataSource: UserListDataSource
     private let userListCellIdentifier = "userListCellIdentifier"
 
-    init() {
-        dataSource = UserListDataSource(cellIdentifier: userListCellIdentifier)
+    init(dependencies: UserListViewControllerDependencies) {
+        dataSource = UserListDataSource(cellIdentifier: userListCellIdentifier, dependencies: dependencies)
         super.init(nibName: nil, bundle: nil)
     }
 

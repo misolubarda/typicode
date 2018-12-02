@@ -19,6 +19,7 @@
 		9A7DE89F21B46AF6002C37F8 /* UserListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89E21B46AF6002C37F8 /* UserListDataSource.swift */; };
 		9A7DE8A121B46F22002C37F8 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE8A021B46F22002C37F8 /* UserListCell.swift */; };
 		9A7DE8A321B46F2A002C37F8 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7DE8A221B46F2A002C37F8 /* UserListCell.xib */; };
+		9A7DE8A521B471C1002C37F8 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE8A421B471C1002C37F8 /* AppDependencies.swift */; };
 		9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC569821B181E400A05ED6 /* AppDelegate.swift */; };
 		9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC569F21B181E600A05ED6 /* Assets.xcassets */; };
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 		9A7DE89E21B46AF6002C37F8 /* UserListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListDataSource.swift; sourceTree = "<group>"; };
 		9A7DE8A021B46F22002C37F8 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		9A7DE8A221B46F2A002C37F8 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
+		9A7DE8A421B471C1002C37F8 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		9AAC569521B181E400A05ED6 /* Typicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC569821B181E400A05ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC569F21B181E600A05ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			children = (
 				9A7DE89921B468C6002C37F8 /* User list */,
 				9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */,
+				9A7DE8A421B471C1002C37F8 /* AppDependencies.swift */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 			files = (
 				9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */,
 				9A7DE89F21B46AF6002C37F8 /* UserListDataSource.swift in Sources */,
+				9A7DE8A521B471C1002C37F8 /* AppDependencies.swift in Sources */,
 				9A7DE89B21B468E8002C37F8 /* UserListViewController.swift in Sources */,
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 				9A7DE8A121B46F22002C37F8 /* UserListCell.swift in Sources */,
