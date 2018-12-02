@@ -10,4 +10,8 @@ import UIKit
 
 class UserListCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
+
+    func setup(withName name: String) {
+        self.nameLabel.text = name
+    }
 }

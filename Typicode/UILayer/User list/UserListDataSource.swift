@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol UserListDataSourceFeedback: class {
+    func userListDataSourceDidUpdate()
+}
+
 protocol UserListDataSourceDependencies {
     var userListUseCase: UserListUseCase { get }
 }
 
 class UserListDataSource: NSObject {
+    weak var delegate: UserListDataSourceFeedback?
     private let cellIdentifier: String
     private let dependencies: UserListDataSourceDependencies
     private var users = Users()
@@ -27,6 +32,7 @@ class UserListDataSource: NSObject {
             switch response {
             case let .success(users):
                 self?.users = users
+                self?.delegate?.userListDataSourceDidUpdate()
             case .error:
                 break
             }
@@ -36,11 +42,15 @@ class UserListDataSource: NSObject {
 
 extension UserListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        if let userListCell = cell as? UserListCell {
+            let user = users[indexPath.row]
+            userListCell.setup(withName: user.name)
+        }
         return cell
     }
 }

@@ -34,5 +34,12 @@ class UserListViewController: UIViewController {
     private func setupTable() {
         tableView.register(UINib(nibName: "UserListCell", bundle: nil), forCellReuseIdentifier: userListCellIdentifier)
         tableView.dataSource = dataSource
+        dataSource.delegate = self
+    }
+}
+
+extension UserListViewController: UserListDataSourceFeedback {
+    func userListDataSourceDidUpdate() {
+        tableView.reloadData()
     }
 }
