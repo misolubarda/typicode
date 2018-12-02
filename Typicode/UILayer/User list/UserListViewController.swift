@@ -28,6 +28,7 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTable()
+        dataSource.fetch()
     }
 
     private func setupTable() {

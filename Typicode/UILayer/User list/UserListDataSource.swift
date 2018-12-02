@@ -15,6 +15,7 @@ protocol UserListDataSourceDependencies {
 class UserListDataSource: NSObject {
     private let cellIdentifier: String
     private let dependencies: UserListDataSourceDependencies
+    private var users = Users()
 
     init(cellIdentifier: String, dependencies: UserListDataSourceDependencies) {
         self.cellIdentifier = cellIdentifier
@@ -22,8 +23,13 @@ class UserListDataSource: NSObject {
     }
 
     func fetch() {
-        dependencies.userListUseCase.fetch { response in
-
+        dependencies.userListUseCase.fetch { [weak self] response in
+            switch response {
+            case let .success(users):
+                self?.users = users
+            case .error:
+                break
+            }
         }
     }
 }
