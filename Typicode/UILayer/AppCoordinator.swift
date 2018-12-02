@@ -16,8 +16,8 @@ class AppCoordinator {
     }
 
     func start() {
-        let vc = UIViewController()
-        window.rootViewController = vc
+        let userListVC = UserListViewController()
+        window.rootViewController = userListVC
         window.makeKeyAndVisible()
     }
 }

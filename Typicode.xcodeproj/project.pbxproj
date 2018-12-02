@@ -14,6 +14,8 @@
 		9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */; };
 		9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */; };
 		9A7DE89821B3440A002C37F8 /* UserFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89721B3440A002C37F8 /* UserFake.swift */; };
+		9A7DE89B21B468E8002C37F8 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89A21B468E8002C37F8 /* UserListViewController.swift */; };
+		9A7DE89D21B46900002C37F8 /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A7DE89C21B46900002C37F8 /* UserListViewController.xib */; };
 		9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC569821B181E400A05ED6 /* AppDelegate.swift */; };
 		9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC569F21B181E600A05ED6 /* Assets.xcassets */; };
 		9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC56A121B181E600A05ED6 /* LaunchScreen.storyboard */; };
@@ -61,6 +63,8 @@
 		9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProviderTests.swift; sourceTree = "<group>"; };
 		9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpServiceFake.swift; sourceTree = "<group>"; };
 		9A7DE89721B3440A002C37F8 /* UserFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFake.swift; sourceTree = "<group>"; };
+		9A7DE89A21B468E8002C37F8 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		9A7DE89C21B46900002C37F8 /* UserListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewController.xib; sourceTree = "<group>"; };
 		9AAC569521B181E400A05ED6 /* Typicode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typicode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AAC569821B181E400A05ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AAC569F21B181E600A05ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 			path = Providers;
 			sourceTree = "<group>";
 		};
+		9A7DE89921B468C6002C37F8 /* User list */ = {
+			isa = PBXGroup;
+			children = (
+				9A7DE89A21B468E8002C37F8 /* UserListViewController.swift */,
+				9A7DE89C21B46900002C37F8 /* UserListViewController.xib */,
+			);
+			path = "User list";
+			sourceTree = "<group>";
+		};
 		9AAC568C21B181E400A05ED6 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		9AAC56C621B1A00500A05ED6 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A7DE89921B468C6002C37F8 /* User list */,
 				9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */,
 			);
 			path = UILayer;
@@ -371,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AAC56A321B181E600A05ED6 /* LaunchScreen.storyboard in Resources */,
+				9A7DE89D21B46900002C37F8 /* UserListViewController.xib in Resources */,
 				9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +503,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AAC56CA21B1A0A300A05ED6 /* AppCoordinator.swift in Sources */,
+				9A7DE89B21B468E8002C37F8 /* UserListViewController.swift in Sources */,
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
