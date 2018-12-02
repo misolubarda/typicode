@@ -10,9 +10,11 @@ import UIKit
 
 class UserListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    private let dataSource = UserListDataSource()
+    private let dataSource: UserListDataSource
+    private let userListCellIdentifier = "userListCellIdentifier"
 
     init() {
+        dataSource = UserListDataSource(cellIdentifier: userListCellIdentifier)
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -27,6 +29,7 @@ class UserListViewController: UIViewController {
     }
 
     private func setupTable() {
+        tableView.register(UINib(nibName: "UserListCell", bundle: nil), forCellReuseIdentifier: userListCellIdentifier)
         tableView.dataSource = dataSource
     }
 }

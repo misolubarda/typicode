@@ -9,7 +9,11 @@
 import UIKit
 
 class UserListDataSource: NSObject {
+    private let cellIdentifier: String
 
+    init(cellIdentifier: String) {
+        self.cellIdentifier = cellIdentifier
+    }
 }
 
 extension UserListDataSource: UITableViewDataSource {
@@ -18,6 +22,7 @@ extension UserListDataSource: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        return cell
     }
 }
