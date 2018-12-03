@@ -10,6 +10,8 @@
 		3EEC3609983E18BAB86B7222 /* Pods_TypicodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD3C3D7B0CC463CB0779509 /* Pods_TypicodeTests.framework */; };
 		9A4676E921B5C1E300831EBE /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676E821B5C1E300831EBE /* PostListViewController.swift */; };
 		9A4676EB21B5C1EC00831EBE /* PostListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4676EA21B5C1EC00831EBE /* PostListViewController.xib */; };
+		9A4676ED21B5D33400831EBE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676EC21B5D33400831EBE /* Post.swift */; };
+		9A4676EF21B5D3A100831EBE /* PostListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676EE21B5D3A100831EBE /* PostListUseCase.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
@@ -65,6 +67,8 @@
 		7A2D0BE9C65307875D201D7D /* Pods-Typicode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Typicode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Typicode/Pods-Typicode.debug.xcconfig"; sourceTree = "<group>"; };
 		9A4676E821B5C1E300831EBE /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		9A4676EA21B5C1EC00831EBE /* PostListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListViewController.xib; sourceTree = "<group>"; };
+		9A4676EC21B5D33400831EBE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		9A4676EE21B5D3A100831EBE /* PostListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */,
+				9A4676EE21B5D3A100831EBE /* PostListUseCase.swift */,
 			);
 			path = "Use cases";
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9AAC56CC21B1A28E00A05ED6 /* User.swift */,
+				9A4676EC21B5D33400831EBE /* Post.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -540,7 +546,9 @@
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
 				9AAC56D021B1A3D500A05ED6 /* Endpoint.swift in Sources */,
 				9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */,
+				9A4676EF21B5D3A100831EBE /* PostListUseCase.swift in Sources */,
 				9AAC56D821B1A6BC00A05ED6 /* NetworkSession.swift in Sources */,
+				9A4676ED21B5D33400831EBE /* Post.swift in Sources */,
 				9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */,
 				9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
