@@ -9,11 +9,20 @@
 import UIKit
 
 class PostListViewController: UIViewController {
-    init() {
+    private let user: User
+
+    init(user: User) {
+        self.user = user
         super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
         return nil
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        navigationItem.title = user.name
     }
 }

@@ -12,6 +12,7 @@ protocol AppCoordinatorDependencies: UserListViewControllerDependencies {}
 
 class AppCoordinator {
     let window: UIWindow
+    let navigation = UINavigationController()
     private let dependencies: AppCoordinatorDependencies
 
     init(dependencies: AppCoordinatorDependencies) {
@@ -20,7 +21,8 @@ class AppCoordinator {
     }
 
     func start() {
-        window.rootViewController = userListVC
+        window.rootViewController = navigation
+        navigation.pushViewController(userListVC, animated: false)
         window.makeKeyAndVisible()
     }
 
@@ -29,10 +31,15 @@ class AppCoordinator {
         userListVC.delegate = self
         return userListVC
     }
+
+    private func presentPostList(for user: User) {
+        let postListVC = PostListViewController(user: user)
+        navigation.pushViewController(postListVC, animated: true)
+    }
 }
 
 extension AppCoordinator: UserListViewControllerDelegate {
     func userListViewControllerDidSelect(_ user: User) {
-
+        presentPostList(for: user)
     }
 }
