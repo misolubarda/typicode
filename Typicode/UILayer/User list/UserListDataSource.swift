@@ -49,7 +49,7 @@ extension UserListDataSource: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         if let userListCell = cell as? UserListCell {
             let user = users[indexPath.row]
-            userListCell.setup(withName: user.name)
+            userListCell.setup(withName: user.name, username: user.username, email: user.email, address: user.address)
         }
         return cell
     }
