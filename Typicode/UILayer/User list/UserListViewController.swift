@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol UserListViewControllerDelegate: class {
+    func userListViewControllerDidSelect(_ user: User)
+}
+
 protocol UserListViewControllerDependencies: UserListDataSourceDependencies {}
 
 class UserListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+
+    weak var delegate: UserListViewControllerDelegate?
     private let dataSource: UserListDataSource
     private let userListCellIdentifier = "userListCellIdentifier"
 
@@ -34,6 +40,7 @@ class UserListViewController: UIViewController {
     private func setupTable() {
         tableView.register(UINib(nibName: "UserListCell", bundle: nil), forCellReuseIdentifier: userListCellIdentifier)
         tableView.dataSource = dataSource
+        tableView.delegate = dataSource
         dataSource.delegate = self
     }
 }
@@ -41,5 +48,9 @@ class UserListViewController: UIViewController {
 extension UserListViewController: UserListDataSourceFeedback {
     func userListDataSourceDidUpdate() {
         tableView.reloadData()
+    }
+
+    func userListDataSourceDidSelect(_ user: User) {
+        delegate?.userListViewControllerDidSelect(user)
     }
 }

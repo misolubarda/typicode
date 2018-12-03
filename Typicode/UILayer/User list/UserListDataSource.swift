@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserListDataSourceFeedback: class {
     func userListDataSourceDidUpdate()
+    func userListDataSourceDidSelect(_ user: User)
 }
 
 protocol UserListDataSourceDependencies {
@@ -52,5 +53,12 @@ extension UserListDataSource: UITableViewDataSource {
             userListCell.setup(withName: user.name, username: user.username, email: user.email, address: user.address)
         }
         return cell
+    }
+}
+
+extension UserListDataSource: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        delegate?.userListDataSourceDidSelect(user)
     }
 }

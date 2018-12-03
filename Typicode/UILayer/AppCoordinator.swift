@@ -20,8 +20,19 @@ class AppCoordinator {
     }
 
     func start() {
-        let userListVC = UserListViewController(dependencies: dependencies)
         window.rootViewController = userListVC
         window.makeKeyAndVisible()
+    }
+
+    private var userListVC: UserListViewController {
+        let userListVC = UserListViewController(dependencies: dependencies)
+        userListVC.delegate = self
+        return userListVC
+    }
+}
+
+extension AppCoordinator: UserListViewControllerDelegate {
+    func userListViewControllerDidSelect(_ user: User) {
+
     }
 }
