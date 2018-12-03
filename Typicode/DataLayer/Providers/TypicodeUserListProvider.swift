@@ -23,7 +23,7 @@ class TypicodeUserListProvider: UserListUseCase {
         service.execute(request) { (response: Response<[TypicodeUser]>) in
             switch response {
             case let .success(userList):
-                completion(.success(userList.users))
+                completion(.success(userList))
             case let .error(error):
                 completion(.error(error))
             }
@@ -31,16 +31,21 @@ class TypicodeUserListProvider: UserListUseCase {
     }
 }
 
-struct TypicodeUser: Decodable {
+struct TypicodeUser: Decodable, User {
     enum CodingKeys: String, CodingKey {
-        case name, username, email
+        case name, username, email, id
         case typicodeAddress = "address"
     }
 
+    let id: Int
     let name: String
     let username: String
     let email: String
     let typicodeAddress: TypicodeAddress
+    
+    var address: String {
+        return typicodeAddress.address
+    }
 }
 
 struct TypicodeAddress: Decodable {
@@ -51,14 +56,5 @@ struct TypicodeAddress: Decodable {
 
     var address: String {
         return [street, suite, city, zipcode].joined(separator: ", ")
-    }
-}
-
-extension Array where Element == TypicodeUser {
-    var users: [User] {
-        return map { User(name: $0.name,
-                          username: $0.username,
-                          email: $0.email,
-                          address: $0.typicodeAddress.address) }
     }
 }

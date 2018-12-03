@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct User {
-    let name: String
-    let username: String
-    let email: String
-    let address: String
+protocol User {
+    var name: String { get }
+    var username: String { get }
+    var email: String { get }
+    var address: String { get }
 }
 
 typealias Users = [User]

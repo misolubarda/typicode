@@ -86,13 +86,17 @@ class TypicodeUserListProviderTests: XCTestCase {
 
 private extension TypicodeUser {
     static var fakeUser: TypicodeUser {
-        let address = TypicodeAddress(street: "street1",
-                                      suite: "suite",
-                                      city: "city",
-                                      zipcode: "zipcode")
-        return TypicodeUser(name: "name1",
-                            username: "username1",
-                            email: "email1",
-                            typicodeAddress: address)
+        return TypicodeUser()
+    }
+
+    private init() {
+        self.init(id: 0,
+                  name: "name",
+                  username: "username",
+                  email: "email",
+                  typicodeAddress: TypicodeAddress(street: "street1",
+                                                   suite: "suite",
+                                                   city: "city",
+                                                   zipcode: "zipcode"))
     }
 }
