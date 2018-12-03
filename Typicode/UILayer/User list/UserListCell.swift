@@ -14,6 +14,15 @@ class UserListCell: UITableViewCell {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        nameLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+        usernameLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        emailLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        addressLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+    }
+
     func setup(withName name: String, username: String, email: String, address: String) {
         self.nameLabel.text = name
         self.usernameLabel.text = username
