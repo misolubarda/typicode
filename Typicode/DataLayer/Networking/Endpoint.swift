@@ -9,12 +9,14 @@
 import Foundation
 
 enum Endpoint {
-    case users
+    case users, posts(userId: String)
 
     var path: String {
         switch self {
         case .users:
             return "users"
+        case let .posts(userId):
+            return "posts?userId=\(userId)"
         }
     }
 }
