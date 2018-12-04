@@ -10,4 +10,5 @@ import Foundation
 
 class AppDependencies: AppCoordinatorDependencies {
     var userListUseCase: UserListUseCase = TypicodeUserListProvider()
+    var postListUseCase: PostListUseCase = TypicodePostListProvider()
 }

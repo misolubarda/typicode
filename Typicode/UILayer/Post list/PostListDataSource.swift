@@ -8,12 +8,16 @@
 
 import UIKit
 
+protocol PostListDataSourceDependencies {
+    var postListUseCase: PostListUseCase { get }
+}
+
 class PostListDataSource: NSObject {
     private let cellIdentifier: String
     private let user: User
     private var posts = Posts()
 
-    init(cellIdentifier: String, user: User) {
+    init(cellIdentifier: String, user: User, dependencies: PostListDataSourceDependencies) {
         self.user = user
         self.cellIdentifier = cellIdentifier
     }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+protocol PostListViewControllerDependencies: PostListDataSourceDependencies {}
+
 class PostListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
@@ -15,8 +17,8 @@ class PostListViewController: UIViewController {
     private let postListCellIdentifier = "postListCellIdentifier"
     private let user: User
 
-    init(user: User) {
-        dataSource = PostListDataSource(cellIdentifier: postListCellIdentifier, user: user)
+    init(user: User, dependencies: PostListViewControllerDependencies) {
+        dataSource = PostListDataSource(cellIdentifier: postListCellIdentifier, user: user, dependencies: dependencies)
         self.user = user
         super.init(nibName: nil, bundle: nil)
     }

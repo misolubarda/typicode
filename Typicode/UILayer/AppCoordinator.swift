@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AppCoordinatorDependencies: UserListViewControllerDependencies {}
+protocol AppCoordinatorDependencies: UserListViewControllerDependencies, PostListViewControllerDependencies {}
 
 class AppCoordinator {
     let window: UIWindow
@@ -33,7 +33,7 @@ class AppCoordinator {
     }
 
     private func presentPostList(for user: User) {
-        let postListVC = PostListViewController(user: user)
+        let postListVC = PostListViewController(user: user, dependencies: dependencies)
         navigation.pushViewController(postListVC, animated: true)
     }
 }
