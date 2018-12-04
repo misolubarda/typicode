@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostListViewController" customModule="Typicode" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="nMo-Jz-1gZ" id="7mD-9B-Cg7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HHZ-6o-JSW"/>
             </connections>
         </placeholder>
