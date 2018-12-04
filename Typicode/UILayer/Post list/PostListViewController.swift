@@ -36,6 +36,7 @@ class PostListViewController: UIViewController {
     }
 
     private func setupTable() {
+        tableView.register(UINib(nibName: "PostListCell", bundle: nil), forCellReuseIdentifier: postListCellIdentifier)
         tableView.dataSource = dataSource
         dataSource.delegate = self
     }

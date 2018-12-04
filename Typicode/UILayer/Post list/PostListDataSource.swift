@@ -48,6 +48,11 @@ extension PostListDataSource: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        if let postListCell = cell as? PostListCell {
+            let post = posts[indexPath.row]
+            postListCell.setup(withTitle: post.title, body: post.body)
+        }
+        return cell
     }
 }
