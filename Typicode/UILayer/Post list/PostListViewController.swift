@@ -37,5 +37,12 @@ class PostListViewController: UIViewController {
 
     private func setupTable() {
         tableView.dataSource = dataSource
+        dataSource.delegate = self
+    }
+}
+
+extension PostListViewController: PostListDataSourceFeedback {
+    func postListDataSourceDidUpdate() {
+        tableView.reloadData()
     }
 }

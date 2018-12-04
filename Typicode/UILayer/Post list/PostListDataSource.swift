@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol PostListDataSourceFeedback: class {
+    func postListDataSourceDidUpdate()
+}
+
 protocol PostListDataSourceDependencies {
     var postListUseCase: PostListUseCase { get }
 }
 
 class PostListDataSource: NSObject {
+    weak var delegate: PostListDataSourceFeedback?
     private let cellIdentifier: String
     private let user: User
     private let dependencies: PostListDataSourceDependencies
@@ -29,6 +34,7 @@ class PostListDataSource: NSObject {
             switch response {
             case let .success(posts):
                 self?.posts = posts
+                self?.delegate?.postListDataSourceDidUpdate()
             case .error:
                 break
             }
