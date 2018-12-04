@@ -15,11 +15,24 @@ protocol PostListDataSourceDependencies {
 class PostListDataSource: NSObject {
     private let cellIdentifier: String
     private let user: User
+    private let dependencies: PostListDataSourceDependencies
     private var posts = Posts()
 
     init(cellIdentifier: String, user: User, dependencies: PostListDataSourceDependencies) {
         self.user = user
         self.cellIdentifier = cellIdentifier
+        self.dependencies = dependencies
+    }
+
+    func fetch() {
+        dependencies.postListUseCase.fetch(for: user) { [weak self] response in
+            switch response {
+            case let .success(posts):
+                self?.posts = posts
+            case .error:
+                break
+            }
+        }
     }
 }
 

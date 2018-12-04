@@ -32,6 +32,7 @@ class PostListViewController: UIViewController {
 
         navigationItem.title = user.name
         setupTable()
+        dataSource.fetch()
     }
 
     private func setupTable() {
