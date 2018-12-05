@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserListViewController" customModule="Typicode" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="zke-iN-8Zu" id="Qxp-Ph-sIO"/>
                 <outlet property="tableView" destination="3wd-fl-PuY" id="5FU-8o-iDh"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Vwg-P9-69H"/>
             </connections>
@@ -25,13 +26,21 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zke-iN-8Zu" customClass="ActivityIndicatorView" customModule="Typicode" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3wd-fl-PuY" secondAttribute="bottom" id="00v-i1-yWr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zke-iN-8Zu" secondAttribute="trailing" id="BNo-xs-crK"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="3wd-fl-PuY" secondAttribute="top" id="JQ1-9N-Ul9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3wd-fl-PuY" secondAttribute="trailing" id="LGx-81-mn9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zke-iN-8Zu" secondAttribute="bottom" id="Nbt-6d-WzP"/>
                 <constraint firstItem="3wd-fl-PuY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PHH-zK-wbz"/>
+                <constraint firstItem="zke-iN-8Zu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="PMt-n8-amY"/>
+                <constraint firstItem="zke-iN-8Zu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hXc-Ss-OCe"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>

@@ -16,6 +16,8 @@
 		9A4676F321B6B12100831EBE /* PostListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676F221B6B12100831EBE /* PostListDataSource.swift */; };
 		9A4676F521B6BFCE00831EBE /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676F421B6BFCE00831EBE /* PostListCell.swift */; };
 		9A4676F721B6BFD600831EBE /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4676F621B6BFD600831EBE /* PostListCell.xib */; };
+		9A4676FA21B6DC2C00831EBE /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676F921B6DC2C00831EBE /* ActivityIndicatorView.swift */; };
+		9A4676FC21B6DD9400831EBE /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */; };
 		9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676FE21B7213100831EBE /* UIView+Nib.swift */; };
 		9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46770021B7214E00831EBE /* UIView+Subview.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
@@ -79,6 +81,8 @@
 		9A4676F221B6B12100831EBE /* PostListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListDataSource.swift; sourceTree = "<group>"; };
 		9A4676F421B6BFCE00831EBE /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
 		9A4676F621B6BFD600831EBE /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
+		9A4676F921B6DC2C00831EBE /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		9A4676FE21B7213100831EBE /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		9A46770021B7214E00831EBE /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
@@ -163,6 +167,15 @@
 				9A4676EA21B5C1EC00831EBE /* PostListViewController.xib */,
 			);
 			path = "Post list";
+			sourceTree = "<group>";
+		};
+		9A4676F821B6DC0B00831EBE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9A4676F921B6DC2C00831EBE /* ActivityIndicatorView.swift */,
+				9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9A4676FD21B71AC700831EBE /* Extensions */ = {
@@ -264,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4676FD21B71AC700831EBE /* Extensions */,
+				9A4676F821B6DC0B00831EBE /* Components */,
 				9A4676E721B5C1D000831EBE /* Post list */,
 				9A7DE89921B468C6002C37F8 /* User list */,
 				9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */,
@@ -447,6 +461,7 @@
 				9A4676EB21B5C1EC00831EBE /* PostListViewController.xib in Resources */,
 				9A4676F721B6BFD600831EBE /* PostListCell.xib in Resources */,
 				9A7DE89D21B46900002C37F8 /* UserListViewController.xib in Resources */,
+				9A4676FC21B6DD9400831EBE /* ActivityIndicatorView.xib in Resources */,
 				9AAC56A021B181E600A05ED6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,6 +598,7 @@
 				9A4676F121B5D3FB00831EBE /* TypicodePostListProvider.swift in Sources */,
 				9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */,
 				9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */,
+				9A4676FA21B6DC2C00831EBE /* ActivityIndicatorView.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
 				9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */,
 			);

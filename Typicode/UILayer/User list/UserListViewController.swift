@@ -16,6 +16,7 @@ protocol UserListViewControllerDependencies: UserListDataSourceDependencies {}
 
 class UserListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: ActivityIndicatorView!
 
     weak var delegate: UserListViewControllerDelegate?
     private let dataSource: UserListDataSource
@@ -34,7 +35,17 @@ class UserListViewController: UIViewController {
         super.viewDidLoad()
 
         setupTable()
+        fetch()
+    }
+
+    private func fetch() {
         dataSource.fetch()
+        activityIndicatorView.isHidden = false
+    }
+
+    private func updateUI() {
+        tableView.reloadData()
+        activityIndicatorView.isHidden = true
     }
 
     private func setupTable() {
@@ -47,7 +58,7 @@ class UserListViewController: UIViewController {
 
 extension UserListViewController: UserListDataSourceFeedback {
     func userListDataSourceDidUpdate() {
-        tableView.reloadData()
+        updateUI()
     }
 
     func userListDataSourceDidSelect(_ user: User) {
