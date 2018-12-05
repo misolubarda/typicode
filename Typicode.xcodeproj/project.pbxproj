@@ -16,6 +16,8 @@
 		9A4676F321B6B12100831EBE /* PostListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676F221B6B12100831EBE /* PostListDataSource.swift */; };
 		9A4676F521B6BFCE00831EBE /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676F421B6BFCE00831EBE /* PostListCell.swift */; };
 		9A4676F721B6BFD600831EBE /* PostListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4676F621B6BFD600831EBE /* PostListCell.xib */; };
+		9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676FE21B7213100831EBE /* UIView+Nib.swift */; };
+		9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46770021B7214E00831EBE /* UIView+Subview.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
@@ -77,6 +79,8 @@
 		9A4676F221B6B12100831EBE /* PostListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListDataSource.swift; sourceTree = "<group>"; };
 		9A4676F421B6BFCE00831EBE /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
 		9A4676F621B6BFD600831EBE /* PostListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostListCell.xib; sourceTree = "<group>"; };
+		9A4676FE21B7213100831EBE /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
+		9A46770021B7214E00831EBE /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
@@ -159,6 +163,15 @@
 				9A4676EA21B5C1EC00831EBE /* PostListViewController.xib */,
 			);
 			path = "Post list";
+			sourceTree = "<group>";
+		};
+		9A4676FD21B71AC700831EBE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4676FE21B7213100831EBE /* UIView+Nib.swift */,
+				9A46770021B7214E00831EBE /* UIView+Subview.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9A7DE88A21B3327E002C37F8 /* Use cases */ = {
@@ -250,6 +263,7 @@
 		9AAC56C621B1A00500A05ED6 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A4676FD21B71AC700831EBE /* Extensions */,
 				9A4676E721B5C1D000831EBE /* Post list */,
 				9A7DE89921B468C6002C37F8 /* User list */,
 				9AAC56C921B1A0A300A05ED6 /* AppCoordinator.swift */,
@@ -567,6 +581,8 @@
 				9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */,
 				9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */,
 				9A4676F121B5D3FB00831EBE /* TypicodePostListProvider.swift in Sources */,
+				9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */,
+				9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */,
 				9AAC56CD21B1A28E00A05ED6 /* User.swift in Sources */,
 				9AAC56D621B1A61300A05ED6 /* Response.swift in Sources */,
 			);
