@@ -10,6 +10,7 @@ import UIKit
 
 protocol PostListDataSourceFeedback: class {
     func postListDataSourceDidUpdate()
+    func postListDataSourceDidFail()
 }
 
 protocol PostListDataSourceDependencies {
@@ -36,7 +37,8 @@ class PostListDataSource: NSObject {
                 self?.posts = posts
                 self?.delegate?.postListDataSourceDidUpdate()
             case .error:
-                break
+                self?.posts = []
+                self?.delegate?.postListDataSourceDidFail()
             }
         }
     }

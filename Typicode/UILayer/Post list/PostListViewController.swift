@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol PostListViewControllerDelegate: class {
+    func postListViewControllerDidFail(_ vc: PostListViewController)
+}
+
 protocol PostListViewControllerDependencies: PostListDataSourceDependencies {}
 
 class PostListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicatorView: ActivityIndicatorView!
 
+    weak var delegate: PostListViewControllerDelegate?
     private let dataSource: PostListDataSource
     private let postListCellIdentifier = "postListCellIdentifier"
     private let user: User
@@ -56,5 +61,10 @@ class PostListViewController: UIViewController {
 extension PostListViewController: PostListDataSourceFeedback {
     func postListDataSourceDidUpdate() {
         updateUI()
+    }
+
+    func postListDataSourceDidFail() {
+        updateUI()
+        delegate?.postListViewControllerDidFail(self)
     }
 }

@@ -34,6 +34,7 @@ class AppCoordinator {
 
     private func presentPostList(for user: User) {
         let postListVC = PostListViewController(user: user, dependencies: dependencies)
+        postListVC.delegate = self
         navigation.pushViewController(postListVC, animated: true)
     }
 }
@@ -44,6 +45,12 @@ extension AppCoordinator: UserListViewControllerDelegate {
     }
 
     func userListViewControllerDidFail(_ vc: UserListViewController) {
+        vc.present(UIAlertController.fetchDataErrorAlert, animated: true)
+    }
+}
+
+extension AppCoordinator: PostListViewControllerDelegate {
+    func postListViewControllerDidFail(_ vc: PostListViewController) {
         vc.present(UIAlertController.fetchDataErrorAlert, animated: true)
     }
 }
