@@ -12,6 +12,7 @@ protocol PostListViewControllerDependencies: PostListDataSourceDependencies {}
 
 class PostListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: ActivityIndicatorView!
 
     private let dataSource: PostListDataSource
     private let postListCellIdentifier = "postListCellIdentifier"
@@ -32,7 +33,17 @@ class PostListViewController: UIViewController {
 
         navigationItem.title = user.name
         setupTable()
+        fetch()
+    }
+
+    private func fetch() {
         dataSource.fetch()
+        activityIndicatorView.isHidden = false
+    }
+
+    private func updateUI() {
+        tableView.reloadData()
+        activityIndicatorView.isHidden = true
     }
 
     private func setupTable() {
@@ -44,6 +55,6 @@ class PostListViewController: UIViewController {
 
 extension PostListViewController: PostListDataSourceFeedback {
     func postListDataSourceDidUpdate() {
-        tableView.reloadData()
+        updateUI()
     }
 }
