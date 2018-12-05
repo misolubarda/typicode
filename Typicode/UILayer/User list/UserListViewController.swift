@@ -39,7 +39,7 @@ class UserListViewController: UIViewController {
         fetch()
     }
 
-    private func fetch() {
+    func fetch() {
         dataSource.fetch()
         activityIndicatorView.isHidden = false
     }

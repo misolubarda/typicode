@@ -45,12 +45,14 @@ extension AppCoordinator: UserListViewControllerDelegate {
     }
 
     func userListViewControllerDidFail(_ vc: UserListViewController) {
-        vc.present(UIAlertController.fetchDataErrorAlert, animated: true)
+        let alertVC = UIAlertController.fetchDataErrorAlert { _ in vc.fetch() }
+        vc.present(alertVC, animated: true)
     }
 }
 
 extension AppCoordinator: PostListViewControllerDelegate {
     func postListViewControllerDidFail(_ vc: PostListViewController) {
-        vc.present(UIAlertController.fetchDataErrorAlert, animated: true)
+        let alertVC = UIAlertController.fetchDataErrorAlert { _ in vc.fetch() }
+        vc.present(alertVC, animated: true)
     }
 }
