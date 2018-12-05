@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserListDataSourceFeedback: class {
     func userListDataSourceDidUpdate()
+    func userListDataSourceDidFail()
     func userListDataSourceDidSelect(_ user: User)
 }
 
@@ -35,7 +36,8 @@ class UserListDataSource: NSObject {
                 self?.users = users
                 self?.delegate?.userListDataSourceDidUpdate()
             case .error:
-                break
+                self?.users = []
+                self?.delegate?.userListDataSourceDidFail()
             }
         }
     }

@@ -42,4 +42,8 @@ extension AppCoordinator: UserListViewControllerDelegate {
     func userListViewControllerDidSelect(_ user: User) {
         presentPostList(for: user)
     }
+
+    func userListViewControllerDidFail(_ vc: UserListViewController) {
+        vc.present(UIAlertController.fetchDataErrorAlert, animated: true)
+    }
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol UserListViewControllerDelegate: class {
+    func userListViewControllerDidFail(_ vc: UserListViewController)
     func userListViewControllerDidSelect(_ user: User)
 }
 
@@ -59,6 +60,11 @@ class UserListViewController: UIViewController {
 extension UserListViewController: UserListDataSourceFeedback {
     func userListDataSourceDidUpdate() {
         updateUI()
+    }
+
+    func userListDataSourceDidFail() {
+        updateUI()
+        delegate?.userListViewControllerDidFail(self)
     }
 
     func userListDataSourceDidSelect(_ user: User) {

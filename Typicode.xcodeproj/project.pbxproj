@@ -20,6 +20,7 @@
 		9A4676FC21B6DD9400831EBE /* ActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */; };
 		9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676FE21B7213100831EBE /* UIView+Nib.swift */; };
 		9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46770021B7214E00831EBE /* UIView+Subview.swift */; };
+		9A61857A21B84225008DC571 /* UIAlertController+SpecificAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
@@ -85,6 +86,7 @@
 		9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorView.xib; sourceTree = "<group>"; };
 		9A4676FE21B7213100831EBE /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		9A46770021B7214E00831EBE /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
+		9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SpecificAlerts.swift"; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				9A4676F921B6DC2C00831EBE /* ActivityIndicatorView.swift */,
 				9A4676FB21B6DD9400831EBE /* ActivityIndicatorView.xib */,
+				9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				9A7DE8A521B471C1002C37F8 /* AppDependencies.swift in Sources */,
 				9A4676F321B6B12100831EBE /* PostListDataSource.swift in Sources */,
 				9A7DE89B21B468E8002C37F8 /* UserListViewController.swift in Sources */,
+				9A61857A21B84225008DC571 /* UIAlertController+SpecificAlerts.swift in Sources */,
 				9AAC569921B181E400A05ED6 /* AppDelegate.swift in Sources */,
 				9A7DE8A121B46F22002C37F8 /* UserListCell.swift in Sources */,
 				9AAC56D221B1A44300A05ED6 /* HTTPRequest.swift in Sources */,
