@@ -53,6 +53,7 @@ class UserListViewController: UIViewController {
         tableView.register(UINib(nibName: "UserListCell", bundle: nil), forCellReuseIdentifier: userListCellIdentifier)
         tableView.dataSource = dataSource
         tableView.delegate = dataSource
+        tableView.tableFooterView = UIView(frame: .zero)
         dataSource.delegate = self
     }
 }
