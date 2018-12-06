@@ -83,20 +83,3 @@ class TypicodeUserListProviderTests: XCTestCase {
         expect(error).to(beTrue())
     }
 }
-
-private extension TypicodeUser {
-    static var fakeUser: TypicodeUser {
-        return TypicodeUser()
-    }
-
-    private init() {
-        self.init(id: 0,
-                  name: "name",
-                  username: "username",
-                  email: "email",
-                  typicodeAddress: TypicodeAddress(street: "street1",
-                                                   suite: "suite",
-                                                   city: "city",
-                                                   zipcode: "zipcode"))
-    }
-}

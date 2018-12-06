@@ -21,6 +21,8 @@
 		9A4676FF21B7213100831EBE /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4676FE21B7213100831EBE /* UIView+Nib.swift */; };
 		9A46770121B7214E00831EBE /* UIView+Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A46770021B7214E00831EBE /* UIView+Subview.swift */; };
 		9A61857A21B84225008DC571 /* UIAlertController+SpecificAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */; };
+		9A708A6321B971DC00E67D93 /* TypicodePostListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6221B971DC00E67D93 /* TypicodePostListProvider.swift */; };
+		9A708A6521B974D100E67D93 /* PostFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6421B974D100E67D93 /* PostFake.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
@@ -87,6 +89,8 @@
 		9A4676FE21B7213100831EBE /* UIView+Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
 		9A46770021B7214E00831EBE /* UIView+Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Subview.swift"; sourceTree = "<group>"; };
 		9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SpecificAlerts.swift"; sourceTree = "<group>"; };
+		9A708A6221B971DC00E67D93 /* TypicodePostListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodePostListProvider.swift; sourceTree = "<group>"; };
+		9A708A6421B974D100E67D93 /* PostFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFake.swift; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
@@ -190,6 +194,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9A708A6021B971A000E67D93 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9AAC56DC21B2D3F500A05ED6 /* Fakes */,
+				9AAC56DA21B1AB1200A05ED6 /* HttpServiceTests.swift */,
+				9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */,
+				9A708A6221B971DC00E67D93 /* TypicodePostListProvider.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		9A708A6121B971AB00E67D93 /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILayer;
+			sourceTree = "<group>";
+		};
 		9A7DE88A21B3327E002C37F8 /* Use cases */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +281,8 @@
 		9AAC56AC21B181E600A05ED6 /* TypicodeTests */ = {
 			isa = PBXGroup;
 			children = (
-				9AAC56DC21B2D3F500A05ED6 /* Fakes */,
-				9AAC56DA21B1AB1200A05ED6 /* HttpServiceTests.swift */,
-				9A7DE89321B33B63002C37F8 /* TypicodeUserListProviderTests.swift */,
+				9A708A6021B971A000E67D93 /* DataLayer */,
+				9A708A6121B971AB00E67D93 /* UILayer */,
 				9AAC56AF21B181E600A05ED6 /* Info.plist */,
 			);
 			path = TypicodeTests;
@@ -334,6 +355,7 @@
 				9A7DE89521B33B89002C37F8 /* HttpServiceFake.swift */,
 				9AAC56DD21B2D40100A05ED6 /* NetworkSessionFake.swift */,
 				9A7DE89721B3440A002C37F8 /* UserFake.swift */,
+				9A708A6421B974D100E67D93 /* PostFake.swift */,
 			);
 			path = Fakes;
 			sourceTree = "<group>";
@@ -615,8 +637,10 @@
 				9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */,
 				9AAC56DE21B2D40100A05ED6 /* NetworkSessionFake.swift in Sources */,
 				9A7DE89821B3440A002C37F8 /* UserFake.swift in Sources */,
+				9A708A6321B971DC00E67D93 /* TypicodePostListProvider.swift in Sources */,
 				9AAC56DB21B1AB1200A05ED6 /* HttpServiceTests.swift in Sources */,
 				9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */,
+				9A708A6521B974D100E67D93 /* PostFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
