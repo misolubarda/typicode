@@ -34,8 +34,8 @@ extension Data {
         """.data(using: .utf8)!
     }
 
-    var decodedUser: UserFake {
-        return try! JSONDecoder().decode(UserFake.self, from: self)
+    var decodedUser: TypicodeUser {
+        return try! JSONDecoder().decode(TypicodeUser.self, from: self)
     }
 
     private static var userString: String {
@@ -61,13 +61,6 @@ extension Data {
         }
         """
     }
-}
-
-struct UserFake: Decodable, Equatable {
-    let name: String
-    let username: String
-    let email: String
-    let address: [String: String]
 }
 
 extension TypicodeUser {
