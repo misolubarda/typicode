@@ -23,6 +23,10 @@
 		9A61857A21B84225008DC571 /* UIAlertController+SpecificAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */; };
 		9A708A6321B971DC00E67D93 /* TypicodePostListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6221B971DC00E67D93 /* TypicodePostListProvider.swift */; };
 		9A708A6521B974D100E67D93 /* PostFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6421B974D100E67D93 /* PostFake.swift */; };
+		9A708A6721B9785B00E67D93 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6621B9785B00E67D93 /* AppCoordinatorTests.swift */; };
+		9A708A6921B9791C00E67D93 /* AppDependenciesFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6821B9791C00E67D93 /* AppDependenciesFake.swift */; };
+		9A708A6C21B9798F00E67D93 /* UserListUseCaseFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6B21B9798F00E67D93 /* UserListUseCaseFake.swift */; };
+		9A708A6E21B97E0300E67D93 /* PostListUseCaseFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A708A6D21B97E0300E67D93 /* PostListUseCaseFake.swift */; };
 		9A7DE88621B32FAE002C37F8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88521B32FAE002C37F8 /* HttpService.swift */; };
 		9A7DE88C21B332A3002C37F8 /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */; };
 		9A7DE89221B333CD002C37F8 /* TypicodeUserListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */; };
@@ -91,6 +95,10 @@
 		9A61857921B84225008DC571 /* UIAlertController+SpecificAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SpecificAlerts.swift"; sourceTree = "<group>"; };
 		9A708A6221B971DC00E67D93 /* TypicodePostListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodePostListProvider.swift; sourceTree = "<group>"; };
 		9A708A6421B974D100E67D93 /* PostFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFake.swift; sourceTree = "<group>"; };
+		9A708A6621B9785B00E67D93 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		9A708A6821B9791C00E67D93 /* AppDependenciesFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependenciesFake.swift; sourceTree = "<group>"; };
+		9A708A6B21B9798F00E67D93 /* UserListUseCaseFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCaseFake.swift; sourceTree = "<group>"; };
+		9A708A6D21B97E0300E67D93 /* PostListUseCaseFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListUseCaseFake.swift; sourceTree = "<group>"; };
 		9A7DE88521B32FAE002C37F8 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		9A7DE88B21B332A3002C37F8 /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		9A7DE89121B333CD002C37F8 /* TypicodeUserListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypicodeUserListProvider.swift; sourceTree = "<group>"; };
@@ -208,8 +216,20 @@
 		9A708A6121B971AB00E67D93 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				9A708A6A21B9792200E67D93 /* Fakes */,
+				9A708A6621B9785B00E67D93 /* AppCoordinatorTests.swift */,
 			);
 			path = UILayer;
+			sourceTree = "<group>";
+		};
+		9A708A6A21B9792200E67D93 /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				9A708A6821B9791C00E67D93 /* AppDependenciesFake.swift */,
+				9A708A6B21B9798F00E67D93 /* UserListUseCaseFake.swift */,
+				9A708A6D21B97E0300E67D93 /* PostListUseCaseFake.swift */,
+			);
+			path = Fakes;
 			sourceTree = "<group>";
 		};
 		9A7DE88A21B3327E002C37F8 /* Use cases */ = {
@@ -636,10 +656,14 @@
 			files = (
 				9A7DE89621B33B89002C37F8 /* HttpServiceFake.swift in Sources */,
 				9AAC56DE21B2D40100A05ED6 /* NetworkSessionFake.swift in Sources */,
+				9A708A6921B9791C00E67D93 /* AppDependenciesFake.swift in Sources */,
 				9A7DE89821B3440A002C37F8 /* UserFake.swift in Sources */,
 				9A708A6321B971DC00E67D93 /* TypicodePostListProvider.swift in Sources */,
+				9A708A6721B9785B00E67D93 /* AppCoordinatorTests.swift in Sources */,
 				9AAC56DB21B1AB1200A05ED6 /* HttpServiceTests.swift in Sources */,
+				9A708A6C21B9798F00E67D93 /* UserListUseCaseFake.swift in Sources */,
 				9A7DE89421B33B63002C37F8 /* TypicodeUserListProviderTests.swift in Sources */,
+				9A708A6E21B97E0300E67D93 /* PostListUseCaseFake.swift in Sources */,
 				9A708A6521B974D100E67D93 /* PostFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

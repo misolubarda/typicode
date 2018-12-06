@@ -15,8 +15,10 @@ class AppCoordinator {
     let navigation = UINavigationController()
     private let dependencies: AppCoordinatorDependencies
 
-    init(dependencies: AppCoordinatorDependencies) {
-        window = UIWindow(frame: UIScreen.main.bounds)
+    var isAnimating = true
+
+    init(window: UIWindow = UIWindow(frame: UIScreen.main.bounds), dependencies: AppCoordinatorDependencies) {
+        self.window = window
         self.dependencies = dependencies
     }
 
@@ -35,7 +37,7 @@ class AppCoordinator {
     private func presentPostList(for user: User) {
         let postListVC = PostListViewController(user: user, dependencies: dependencies)
         postListVC.delegate = self
-        navigation.pushViewController(postListVC, animated: true)
+        navigation.pushViewController(postListVC, animated: isAnimating)
     }
 }
 
@@ -46,13 +48,13 @@ extension AppCoordinator: UserListViewControllerDelegate {
 
     func userListViewControllerDidFail(_ vc: UserListViewController) {
         let alertVC = UIAlertController.fetchDataErrorAlert { _ in vc.fetch() }
-        vc.present(alertVC, animated: true)
+        vc.present(alertVC, animated: isAnimating)
     }
 }
 
 extension AppCoordinator: PostListViewControllerDelegate {
     func postListViewControllerDidFail(_ vc: PostListViewController) {
         let alertVC = UIAlertController.fetchDataErrorAlert { _ in vc.fetch() }
-        vc.present(alertVC, animated: true)
+        vc.present(alertVC, animated: isAnimating)
     }
 }
